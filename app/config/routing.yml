@@ -1,0 +1,7 @@
+nidiap_blog:
+    resource: "@NidiapBlogBundle/Controller/"
+    prefix:   /
+    type: annotation
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

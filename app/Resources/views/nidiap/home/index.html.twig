@@ -1,0 +1,178 @@
+{% extends '/nidiap/template.html.twig' %}
+
+{% block title %}Nidiap{% endblock %}
+
+{% block body %}
+    <!-- Início da seção home-->
+    <section id="secao">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex text-white"> <!-- inicio menu -->
+                    <div class="align-self-center mt-5">
+                        <h1 class="display-4">Venha Fazer Parte .....</h1>
+                        <p>Nidiap é um Nucleo de pesquisa voltado para...........</p>
+                    </div>
+                </div><!-- Fim menu-->
+            </div>
+        </div>
+    </section>
+<!-- Fim da seção home-->
+
+<!-- Inicio seção Conteudo-->
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-9 center">
+            <h2 class="text-center bg-white">
+                Nossos serviços
+            </h2>
+            <!-- inicio serviços -->
+            <div class="row mt-5">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-header bg-transparent ">
+                            <a href="">
+                                <img src="{{ asset('vendor/bootstrap-dist/imagem/30.jpg') }}" alt="Jogos" class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body min-max">
+                            <h5 class="card-title text-info">Desenvolvimento de sistemas</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a href="{{ path('detalhe_servico_index') }}" title="Ver mais" class="btn btn-outline-warning ">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-header bg-transparent ">
+                            <a href="">
+                                <img src="{{ asset('vendor/bootstrap-dist/imagem/design.jpg') }}" alt="Designer" class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body min-max">
+                            <h5 class="card-title text-info">Designer</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a href="" title="Ver mais" class="btn btn-outline-warning ">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-header bg-transparent ">
+                            <a href="">
+                                <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Desenvolvimento de sistema" class="card-img-top">
+                            </a>
+                        </div>
+                        <div class="card-body min-max">
+                            <h5 class="card-title text-info">Desenvolvimento de Jogos</h5>
+                            <p class="card-text">Some quick example texulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a href="" title="Ver mais" class="btn btn-outline-warning ">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <a class="text-decoration-none btn btn-outline-primary" href="{{ path('servico_index') }}">
+                    <p class="text-center m-0">
+                        Mais Serviços
+                    </p>
+                </a>
+            </div>
+            <!-- Fim serviços -->
+
+            <!-- inicio Trabalhos -->
+            <h2 class="text-center mt-4 bg-white">
+                Nossos Trabalhos
+            </h2>
+            <div class="row mt-3">
+                <div class="card mb-3 mr-3" style="max-width: 417px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Desenvolvimento de sistema" class="card-img-top">                    </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="#">
+                                    <h5 class="card-title">Indisciplina 2D</h5>
+                                    <p class="card-text"> lorem ipyslom</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 417px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Desenvolvimento de sistema" class="card-img-top">                    </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="#">
+                                <h5 class="card-title">Indisciplina 2D</h5>
+                                <p class="card-text"> lorem ipyslom</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <a class="text-decoration-none btn btn-outline-primary" href="#">
+                    <p class="text-center m-0">
+                        Mais Trabalhos
+                    </p>
+                </a>
+            </div>
+        </div>
+        <!-- Fim Trabalhos -->
+        <!-- inicio Noticias -->
+        <div class="col-md-3 mt-5">
+            <h2>Noticias</h2>
+            <ul class="list-unstyled bg-white">
+                <li class="media border-bottom pb-2 mb-2">
+                    <img class="mr-2 align-self-center " src="https://source.unsplash.com/random/60x60">
+                    <div class="media-body">
+                        <h5 class="not">Título do conteúdo</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </li>
+                <li class="media border-bottom pb-2 mb-2">
+                    <img class="mr-2 align-self-center " src="https://source.unsplash.com/random/60x60">
+                    <div class="media-body">
+                        <h5 class="not">Título do conteúdo</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </li>
+                <li class="media border-bottom pb-2 mb-2">
+                    <img class="mr-2 align-self-center " src="https://source.unsplash.com/random/60x60">
+                    <div class="media-body">
+                        <h5 class="not">Título do conteúdo</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </li>
+
+                <li class="media border-bottom pb-2 mb-2">
+                    <img class="mr-2 align-self-center" src="https://source.unsplash.com/random/60x60">
+                    <div class="media-body">
+                        <h5>Título do conteúdo</h5>
+                        <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim Noticias -->
+</div>
+
+    <!-- Fim seção Conteudo-->
+
+    {% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

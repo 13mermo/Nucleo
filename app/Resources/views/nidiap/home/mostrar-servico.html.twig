@@ -1,0 +1,66 @@
+{% extends '/nidiap/template.html.twig' %}
+
+{% block title %}Nidiap{% endblock %}
+
+{% block body %}
+
+    <!-- Inicio seção Conteudo-->
+<section>
+    <div class="container alt">
+        <div class="row mb-3 ">
+            <div class="col-md-6 mt-5">
+                <img style="max-height: 300px; max-width: 700px;" src="{{ asset('vendor/bootstrap-dist/imagem/html.png') }}" alt="Desenvolvimento de sistemas" class="card-img-top pespctiva shadow">
+            </div>
+            <div class="col-md-6  mt-5 mb-3 ">
+                <h2 class="text-left text-warning">
+                    Desenvolvimento de Sistema
+                </h2>
+                <br>
+                <p class="text-secondary">
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                </p>
+
+            </div>
+        </div>
+        <div class="row mt-5 mb-3">
+            <div class="col-md-6 mt-5 order-md-3">
+                <img class="card-img-top pespctiva-reves shadow" style="max-height: 300px; max-width: 700px;" src="{{ asset('vendor/bootstrap-dist/imagem/vantagem.png') }}" alt="Desenvolvimento de sistemas" >
+            </div>
+            <div class="col-md-6  mt-5 mb-3 order-md-2">
+                <h2 class="text-left text-warning">
+                    Vantagens de um Sitema Para sua Organização
+                </h2>
+                <br>
+                <p class="text-secondary">
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                    Lorem Ipsum is simply dummy text of the printing and typese
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex d-flex-b justify-content-around">
+                <div class="mb-3 ">
+                    <a href="" title="Solicitar" class="btn btn-outline-success mr-5">Solicitar</a>
+                    <a href="" title="Duvida?" class="btn btn-outline-warning mr-5">Duvida?</a>
+                    <a href="" title="Informar Problema!" class="btn btn-outline-danger mr-5 ">Informar Problema</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <!-- Fim seção Conteudo-->
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

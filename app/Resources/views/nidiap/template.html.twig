@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Title!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <!--------- Bootstrap/CSS -------->
+        <link rel="stylesheet" href="{{ asset ('css/styles.css')}}">
+        <link rel="stylesheet" href="{{ asset ('vendor/bootstrap-dist/css/bootstrap.min.css')}}">
+
+        <!--------- Iconis -------->
+        <link rel="stylesheet" href="{{  asset ('vendor/bootstrap-dist/fontawesome/css/all.css')}}">
+
+    {% endblock %}
+</head>
+<body class="bg-light">
+    <!-- Início barra de menu // php bin/console server:run --env=dev --docroot=web-->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-top on fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('dashboard_index') }}"><span class="span-logo">NIDIAP</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mr-4">
+                            <a class="nav-link"  href="{{ path('dashboard_index') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="{{ path('servico_index') }}">Serviços</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="#">Grupos</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="{{ path('noticia_index') }}">Notícias</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="#">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-warning ml-4" href="#">Entrar/Cadastrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim da barra de menu -->
+
+    {% block body %}
+
+    {% endblock %}
+<!-- Inicio Footer -->
+    <footer class=" bg-dark pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left text-white">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <a class="span-logo text-white"  href="{{ path('dashboard_index') }}">
+                    <h5 class="text-uppercase ">NIDIAp</h5>
+                    </a>
+                    <p>Here you can use rows and columns to organize your footer content.</p>
+                    <a href=""  class="btn btn-outline-warning">
+                        <i class=" fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href=""  class="btn btn-outline-warning">
+                        <i class=" fab fa-whatsapp fa-lg"></i>
+                    </a>
+                    <a href=""  class="btn btn-outline-warning">
+                        <i class=" fab fa-instagram fa-lg"></i>
+                    </a>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Páginas</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ path('dashboard_index') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('servico_index') }}">Serviçõs</a>
+                        </li>
+                        <li>
+                            <a href="#!">Trabalhos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('noticia_index') }}">Notícias</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Grupos</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Bate Papo Tecnologico</a>
+                        </li>
+                        <li>
+                            <a href="#!">E2c</a>
+                        </li>
+                        <li>
+                            <a href="#!">Jogos</a>
+                        </li>
+                        <li>
+                            <a href="#!">Sistemas</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright: Todos os Direitos Reservados
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+<!-- JavaScripts-->
+    {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="{{ asset ('vendor/bootstrap-dist/js/bootstrap.min.js')}}"></script>
+    {%  endblock %}
+<!-- Fim JavaScripts-->
+<!-- Fim Footer-->
+</body>
+</html>

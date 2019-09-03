@@ -1,0 +1,54 @@
+{% extends '/dashboard/template.html.twig' %}
+
+{% block title %}NIDIAp Projetos{% endblock %}
+
+{% block body %}
+
+    <div class="fundo">
+        <h1>Todos os Projetos</h1>
+
+        {% if projetos is not empty %}
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Img</th>
+                    <th>Arquivo</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Descrição</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for projeto in projetos %}
+                    <tr>
+                        <td> <img src="{{ asset('upload/imagens/' ~ projeto.imagem.imageName)}}" height="50" width ="50px"></td>
+                        <td class="crr">
+                            <a target="_blank" style="color: #070569;" href="{{ asset('upload/arquivo/' ~ projeto.arquivo.arquivoName)}}"> <strong>PDF</strong></a>
+                        </td>
+                        <td class="crr">{{ projeto.title | slice(0, 25)}}</td>
+                        <td class="crr">{{ projeto.autor }}</td>
+                        <td class="crr">{{ projeto.descricao | slice(0, 25) }}...</td>
+                        <td class="crr" style="float: right">
+                            <a class="btn btn-danger" href="{{ path('delete_projeto', {'id': projeto.id}) }}">Deletar</a>
+                            <a class="btn btn-success" href="{{ path('update_projeto', {'id': projeto.id}) }}">Atualizar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Sem Projetos no momento.</p>
+        {% endif %}
+
+        <br/>
+        <a class="btn btn-success" href="{{ path('create_projeto') }}">Novo Projeto</a>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends '/nidiap/template.html.twig' %}
+
+{% block title %}Nidiap{% endblock %}
+
+{% block body %}
+
+<!-- Inicio seção Conteudo-->
+<div class="container alt">
+    <div class="row cad">
+        <div class="col-md-12 center mb-3">
+            <h2 class="text-center bg-white">
+                 Serviços
+            </h2>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="shadow-sm mb-3">
+                <div>
+                    <a href="">
+                        <img src="{{ asset('vendor/bootstrap-dist/imagem/30.jpg') }}" alt="Desenvolvimento de sistemas" class="card-img-top">
+                    </a>
+                </div>
+                <div class="card-body bg-white min-max">
+                    <h5 class="card-title text-info">Desenvolvimento de Sistemas</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <a href="{{ path('detalhe_servico_index') }}" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="shadow-sm mb-3">
+                <div>
+                    <a href="">
+                        <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img-top">
+                    </a>
+                </div>
+                <div class="card-body bg-white min-max">
+                    <h5 class="card-title text-info">Desenvolvimento de Jogos</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="shadow-sm mb-3">
+                <div>
+                    <a href="">
+                        <img src="{{ asset('vendor/bootstrap-dist/imagem/design.jpg') }}" alt="Jogos" class="card-img-top">
+                    </a>
+                </div>
+                <div class="card-body bg-white min-max">
+                    <h5 class="card-title text-info">Designer</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="shadow-sm mb-3">
+                <div>
+                    <a href="">
+                        <img src="{{ asset('vendor/bootstrap-dist/imagem/formatacao.jpg') }}" alt="Jogos" class="card-img-top">
+                    </a>
+                </div>
+                <div class="card-body bg-white min-max">
+                    <h5 class="card-title text-info">Formatação</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="shadow-sm mb-3">
+                <div>
+                    <a href="">
+                        <img src="{{ asset('vendor/bootstrap-dist/imagem/software.jpg') }}" alt="Jogos" class="card-img-top">
+                    </a>
+                </div>
+                <div class="card-body bg-white min-max">
+                    <h5 class="card-title text-info">Desenvolvimento de sistemas</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Fim seção Conteudo-->
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

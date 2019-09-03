@@ -1,0 +1,4 @@
+services:
+#    nidiap_blog.example:
+#        class: Nidiap\BlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

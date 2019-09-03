@@ -1,0 +1,104 @@
+{% extends '/nidiap/template.html.twig' %}
+
+{% block title %}Nidiap{% endblock %}
+
+{% block body %}
+
+    <!-- Inicio seção Conteudo-->
+    <div class="container alt ">
+        <div class="row text-center">
+            <div class="col-md-8 mt-3">
+                <h1 class="display-5 text-uppercase text-warning">
+                    mine-curso de desenvolcimento de jogos
+                </h1>
+                <p> NIDIAp lança agora seu primeiro mine curso sobre jogos</p>
+                <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img mb-3" style="max-height: 500px; max-width: 600px">
+
+                <p class="text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-outline-primary mb-5">
+                    Inscreva-se
+                </a>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-left">Veja Tambem</h3>
+        <hr>
+        <div class="row bg-white">
+            <div class="card col-md-3 border-0" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-5 m-auto">
+                        <a href="{{ path('detalhe_noticia_index') }}">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img">
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <a href="{{ path('detalhe_noticia_index') }}" class="text-warning"> <h5 class="card-title">Card title</h5> </a>
+                            <p class="card-text cor-paragrafo">Thisxt below as a natucontent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-md-3 border-0" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-5 m-auto">
+                        <a href="{{ path('detalhe_noticia_index') }}">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img">
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <a href="{{ path('detalhe_noticia_index') }}" class="text-warning"> <h5 class="card-title">Card title</h5> </a>
+                            <p class="card-text cor-paragrafo">Thisxt below as a natucontent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-md-3 border-0" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-5 m-auto">
+                        <a href="{{ path('detalhe_noticia_index') }}">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img">
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <a href="{{ path('detalhe_noticia_index') }}" class="text-warning"> <h5 class="card-title">Card title</h5> </a>
+                            <p class="card-text cor-paragrafo">Thisxt below as a natucontent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-md-3 border-0" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-5 m-auto">
+                        <a href="{{ path('detalhe_noticia_index') }}">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img">
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <a href="{{ path('detalhe_noticia_index') }}" class="text-warning"> <h5 class="card-title">Card title</h5> </a>
+                            <p class="card-text cor-paragrafo">Thisxt below as a natucontent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- Fim seção Conteudo-->
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Home {{ name }}{% endblock %}
+{% block body %}
+    <h1>Oi eu sou o goku {{ name }}</h1>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends '/dashboard/template.html.twig' %}
+
+{% block title %}Dashboard Linhas De Pesquisa{% endblock %}
+
+{% block body %}
+    <div class="fundo">
+        <h2>Nova Linha</h2>
+        {{ form_start(form) }}
+
+            <h3>Titulo:</h3>
+            {{ form_widget(form.title) }}
+            <h3>Descrição:</h3>
+            {{ form_widget(form.descricao) }}
+            <br>
+            {{ form_widget(form.save) }}
+            <br>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

@@ -1,0 +1,3 @@
+nidiap_blog_homepage:
+    path:     /
+    defaults: { _controller: NidiapBlogBundle:Default:index }
