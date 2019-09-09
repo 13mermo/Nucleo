@@ -1,16 +1,29 @@
 html {
     font-family: Arial, Verdana, sans-serif !important;
 }
-.cor-paragrafo{
-    color: #402b32;
+html, body{
+    height: 100% !important;
+}
+body{
+    background: #f1f3f7;
+}
+
+.logo{
+    width: 100px;
 }
 #secao {
-    margin-top: 50px;
-    background: url("../vendor/bootstrap-dist/imagem/category.jpg") no-repeat top;
-    background-size: 100%;
-    height: 500px;
-    opacity: 0.7;
+    background-image: url("../vendor/bootstrap-dist/imagem/baner.jpeg");
+    background-repeat: no-repeat;
+    min-height: 500px;
+    background-attachment: fixed;
 }
+.baner{
+    margin-top: 150px;
+}
+.text-link{
+    color: #062c61;
+}
+
 .pespctiva{
     -webkit-transform: perspective(800px) rotateY(20deg);
     transform: perspective(800px) rotateY(20deg);
@@ -20,21 +33,15 @@ html {
     transform: perspective(800px) rotateY(-20deg);
 }
 .navbar.bg-top{
-    background-color: #402b32;
-    padding: 15px 0;
-}
-html, body{
-    height: 100% !important;
+    background: linear-gradient(to right,#181918 0,#15101d 90%);
+    opacity: 0.9;
 }
 .container.alt{
-    margin-top: 80px;
+    margin-top: 95px;
 }
 
 .bg-card .card{
     background-color: #f8f9fa;
-}
-body{
-    background: #f1f3f7;
 }
 
 .span-logo{
@@ -54,6 +61,9 @@ body{
 .btm{
     margin-left: 43%;
 }
+.cor-paragrafo{
+    color: #402b32;
+}
 
 .min-max{
     max-height: 11rem;
@@ -69,27 +79,59 @@ body{
 .cad .shadow-sm:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
+.card .card-img-overlay{
+    padding-top: 250px;
+}
+.bg-produtos{
+    background: #f1ecec;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    #secao {
-      height: auto;
+    .baner{
+        margin-top: 0px;
     }
+
+    .card .card-img-overlay{
+        padding-top: auto;
+    }
+    li.nav-item.ml-5{
+        margin-left: 0!important;
+    }
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    #secao {
-        height: 300px;
+    .baner{
+        margin-top: 20px;
+    }
+    .card .card-img-overlay{
+        padding-top: auto;
+    }
+    li.nav-item.ml-5{
+        margin-left: 0!important;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .baner{
+        margin-top: 70px;
+    }
+    .card .card-img-overlay{
+        padding-top: 0;
+    }
 
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .baner{
+        margin-top: 100px;
+    }
+    .card .card-img-overlay{
+        padding-top: 160px;
+    }
 
 }
 
