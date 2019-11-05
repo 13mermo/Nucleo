@@ -8,12 +8,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DashboardController extends Controller
 {
     /**
-     *@Route("/nucleo", name="dashboard_index")
+     *@Route("/", requirements={"id" = "\d+"}, name="dashboard_index")
      */
     public function showAction()
     {
+        $projetos = $this->getDoctrine()
+            ->getRepository('NidiapBlogBundle:Projetos')
+            ->findAll();
+        $noticias = $this->getDoctrine()
+            ->getRepository('NidiapBlogBundle:Noticia')
+            ->findAll();
         return $this->render(
-            '/nidiap/home/index.html.twig'
+            '/nidiap/home/index.html.twig',
+            array('projetos' => $projetos, 'noticias' => $noticias)
         );
     }
 
@@ -38,12 +45,16 @@ class DashboardController extends Controller
     }
 
     /**
-     *@Route("/noticia", name="noticia_index")
+     *@Route("/noticia", requirements={"id" = "\d+"}, name="noticia_index")
      */
     public function showActionNoticia()
     {
+        $noticias = $this->getDoctrine()
+            ->getRepository('NidiapBlogBundle:Noticia')
+            ->findAll();
         return $this->render(
-            '/nidiap/home/noticia.html.twig'
+            '/nidiap/home/noticia.html.twig',
+            array('noticias' => $noticias)
         );
     }
 

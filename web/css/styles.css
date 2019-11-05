@@ -7,18 +7,152 @@ html, body{
 body{
     background: #f1f3f7;
 }
+.quebra{
+    word-break: break-all;
+}
 
+.slider-btn .prev,
+.slider-btn .next{
+    background-color: var(--secondary);
+    padding: 10px 16px;
+    border-radius: 20px;
+    color: #fff;
+    margin: 0 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+    position: relative;
+}
+.prev{
+    bottom: 260px;
+}
+.next{
+   float: right;
+    bottom: 269px;
+}
+.slide-trabalho .slide{
+    transform: scale(0.7);
+    opacity: 0.9;
+    transition: 0.3s;
+    outline: none !important;
+}
+.slide-trabalho .slide.slick-center{
+    transform: scale(0.9);
+    opacity: 1;
+}
+.text{
+     width: 100%;
+     height: 70px;
+     margin-top: -80px;
+     background:  url("../vendor/bootstrap-dist/imagem/sem_branco.png") repeat-x;
+ }
+.text-baixo{
+    width: 100%;
+    height: 80px;
+    margin-top: -8px;
+    margin-bottom: 60px;
+    background:  url("../vendor/bootstrap-dist/imagem/sem_branco.png") repeat-y;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+.clear{
+    clear: both;
+}
 .logo{
-    width: 100px;
+    width: 130px;
+    margin-top: -20px;
+    position: absolute;
 }
-#secao {
-    background-image: url("../vendor/bootstrap-dist/imagem/baner.jpeg");
+.m-logo{
+    margin-left: 130px;
+}
+.secao {
+    background-image: url("../vendor/bootstrap-dist/imagem/baner3.png");
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 690px;
     background-attachment: fixed;
+
 }
+.img-shadow{
+    border-radius: 5px 5px 0 0 !important;
+    box-shadow: 0 .6rem .5rem rgba(0,0,0,.20);
+}
+.btn-card {
+    display: inline-block;
+    width: 70%;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #141264;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: 0 .6rem .5rem rgba(0,0,0,.20);
+}
+.btn-card:hover{
+    background-color: #fff;
+    color: #141264;
+    text-decoration: none;
+}
+.btn-card-noticia {
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    color: #141264;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: 0 .6rem .5rem rgba(0,0,0,.20);
+    transition: 0.5s;
+}
+.btn-cadastrar{
+    display: inline-block;
+    height: 20px;
+    text-align: center;
+    color: var(--secondary);
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 0 10px;
+    line-height: 1;
+    margin-top: 10px;
+}
+.btn-cadastrar:hover{
+    text-decoration: none;
+}
+.btn-mais{
+    display: inline-block;
+    height: 20px;
+    min-width: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(112, 112, 112);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 0 10px;
+    line-height: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.btn-mais:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(80, 112, 112);
+}
+.teste:hover{
+    box-shadow: 0 .6rem .5rem rgba(0,0,0,.20);
+}
+.btn-card-noticia:hover{
+    background-color: #141264;
+    color: #fff;
+}
+
 .baner{
     margin-top: 150px;
+}
+
+.baner img{
+    max-width: 800px;
 }
 .text-link{
     color: #062c61;
@@ -32,9 +166,32 @@ body{
     -webkit-transform: perspective(800px) rotateY(-20deg);
     transform: perspective(800px) rotateY(-20deg);
 }
-.navbar.bg-top{
+.menu{
     background: linear-gradient(to right,#181918 0,#15101d 90%);
-    opacity: 0.9;
+    opacity: 0.8;
+    transition: 0.2s;  
+}
+.menu ul li a:hover{
+    text-decoration: underline;
+}
+.menu-diferente{
+    background: linear-gradient(to right,#181918 0,#15101d 90%);
+    opacity: 1 !important; 
+}
+.caixa{
+    max-width: 60%;
+    margin-left: 11%;
+    margin-top: -7%;
+}
+.logo-menu-none{
+   display: none;
+}
+.barra-de-menu{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .container.alt{
     margin-top: 95px;
@@ -77,7 +234,14 @@ body{
     color: #d2be87;
 }
 .cad .shadow-sm:hover{
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.secao .shadow-ms{
+    transition: 0.5s;
+}
+.secao .shadow-ms:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    margin-top: -45px;
 }
 .card .card-img-overlay{
     padding-top: 250px;
@@ -86,18 +250,33 @@ body{
     background: #f1ecec;
 }
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+
+@media (min-width: 321px) and (max-width: 575.98px) {
     .baner{
         margin-top: 0px;
-    }
-
-    .card .card-img-overlay{
-        padding-top: auto;
     }
     li.nav-item.ml-5{
         margin-left: 0!important;
     }
-
+    .logo-menu-none{
+        display: block;
+    }
+    .logo-none{
+        display: none;
+    }
+    .m-logo{
+       margin-left: 24px;
+    }
+    .baner img{
+        max-width: 300px;
+        margin-top: 180px;
+    }
+    .text,.text-baixo{
+        width: 50% !important;
+    }
+    h2.caixa{
+        display: none;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -105,12 +284,20 @@ body{
     .baner{
         margin-top: 20px;
     }
-    .card .card-img-overlay{
-        padding-top: auto;
-    }
     li.nav-item.ml-5{
         margin-left: 0!important;
     }
+    .logo-none{
+        display: none;
+    }
+    .baner img{
+        max-width: 400px;
+        margin-top: 200px;
+      }
+    .text,.text-baixo{
+        width: 50% !important;
+    }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -118,8 +305,12 @@ body{
     .baner{
         margin-top: 70px;
     }
-    .card .card-img-overlay{
-        padding-top: 0;
+    .baner img{
+        max-width: 600px;
+        margin-top: 150px;
+    }
+    .titulo-up{
+        margin-top: -70px;
     }
 
 }
@@ -127,15 +318,24 @@ body{
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .baner{
-        margin-top: 100px;
+        margin-top: 150px;
     }
-    .card .card-img-overlay{
-        padding-top: 160px;
+    .titulo-up{
+        margin-top: -70px;
+    }
+    .titulo-up-noticia{
+        margin-top: -70px;
+
     }
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    .titulo-up{
+        margin-top: -70px;
+    }
+    .titulo-up-noticia{
+        margin-top: -70px;
+    }
 }

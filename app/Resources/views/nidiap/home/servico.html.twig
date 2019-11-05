@@ -3,95 +3,41 @@
 {% block title %}Nidiap{% endblock %}
 
 {% block body %}
-
+<section class="secao" style="min-height: 350px !important;">
+    <div class="container">
+        <div class="text-sm-center display-1 text-white" style="padding-top: 150px;">
+            <h1>Nossos Serviços</h1>
+        </div>
+    </div>
+</section>
 <!-- Inicio seção Conteudo-->
-<div class="container alt">
-    <div class="row cad">
-        <div class="col-md-12 center mb-3">
-            <h2 class="text-center bg-white">
-                 Serviços
-            </h2>
+<div class="container">
+    <div class="row">
+        <div class="mt-5 pb-5">
+          <!-- for -->
+                <div class="col-md-10 mb-3 teste  m-auto">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/vantagem.png') }}" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-6 ml-5">
+                            <div class="card-body">
+                                <h1 class="card-title" style="color: rgb(20, 18, 100); margin-left: 40px;">Sites</h1>
+                                <p class="card-text text-secondary quebra">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                </p>
+                                <span>Serviços oferecidos por Soluction EJ.
+
+                                    <a href="" title="Mais" class="btn-mais mr-5" style="width: 90px;">Saber Mais</a>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           <!-- endfor-->
         </div>
-        <div class="col-md-3 col-sm-12">
-            <div class="shadow-sm mb-3">
-                <div>
-                    <a href="">
-                        <img src="{{ asset('vendor/bootstrap-dist/imagem/30.jpg') }}" alt="Desenvolvimento de sistemas" class="card-img-top">
-                    </a>
-                </div>
-                <div class="card-body bg-white min-max">
-                    <h5 class="card-title text-info">Desenvolvimento de Sistemas</h5>
-                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer text-center bg-white">
-                    <a href="{{ path('detalhe_servico_index') }}" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <div class="shadow-sm mb-3">
-                <div>
-                    <a href="">
-                        <img src="{{ asset('vendor/bootstrap-dist/imagem/desenvolvimentojogos.png') }}" alt="Jogos" class="card-img-top">
-                    </a>
-                </div>
-                <div class="card-body bg-white min-max">
-                    <h5 class="card-title text-info">Desenvolvimento de Jogos</h5>
-                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer text-center bg-white">
-                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <div class="shadow-sm mb-3">
-                <div>
-                    <a href="">
-                        <img src="{{ asset('vendor/bootstrap-dist/imagem/design.jpg') }}" alt="Jogos" class="card-img-top">
-                    </a>
-                </div>
-                <div class="card-body bg-white min-max">
-                    <h5 class="card-title text-info">Designer</h5>
-                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer text-center bg-white">
-                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <div class="shadow-sm mb-3">
-                <div>
-                    <a href="">
-                        <img src="{{ asset('vendor/bootstrap-dist/imagem/formatacao.jpg') }}" alt="Jogos" class="card-img-top">
-                    </a>
-                </div>
-                <div class="card-body bg-white min-max">
-                    <h5 class="card-title text-info">Formatação</h5>
-                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer text-center bg-white">
-                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <div class="shadow-sm mb-3">
-                <div>
-                    <a href="">
-                        <img src="{{ asset('vendor/bootstrap-dist/imagem/software.jpg') }}" alt="Jogos" class="card-img-top">
-                    </a>
-                </div>
-                <div class="card-body bg-white min-max">
-                    <h5 class="card-title text-info">Desenvolvimento de sistemas</h5>
-                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer text-center bg-white">
-                    <a href="" title="Solicitar" class="btn btn-outline-success ">Solicitar</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 

@@ -7,6 +7,7 @@ use Nidiap\BlogBundle\Entity\Projetos;
 use Nidiap\BlogBundle\Form\ProjetosType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -16,7 +17,6 @@ class ProjetosController extends Controller
      * @Route("/nidiap/projeto", requirements={"id" = "\d+"}, name="projeto_index"),
      *
      */
-
     public function showAction()
     {
         $projetos = $this->getDoctrine()
@@ -32,6 +32,8 @@ class ProjetosController extends Controller
      * @Route("nidiap/projeto/novo", requirements={"id" = "\d+"}, name="create_projeto")
      * @Method({"POST", "GET"})
      */
+    /* * @Security("has_role('ROLE_ADMIN')") controle de permissoes*/
+
     public function createAction(Request $request)
     {
         $form = $this->createForm(ProjetosType::class);

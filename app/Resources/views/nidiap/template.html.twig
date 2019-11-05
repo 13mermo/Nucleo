@@ -9,175 +9,157 @@
         <!--------- Bootstrap/CSS -------->
         <link rel="stylesheet" href="{{ asset ('css/styles.css')}}">
         <link rel="stylesheet" href="{{ asset ('vendor/bootstrap-dist/css/bootstrap.min.css')}}">
-
         <!--------- Iconis -------->
         <link rel="stylesheet" href="{{  asset ('vendor/bootstrap-dist/fontawesome/css/all.css')}}">
-
+        <!---------- Slick slid ------------->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% endblock %}
 </head>
 <body class="bg-light">
-    <!-- Início barra de menu // php bin/console server:run --env=dev --docroot=web-->
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-top on fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="{{ path('dashboard_index') }}">
-                    <img src="{{ asset('vendor/bootstrap-dist/imagem/ativo6fundobranco.png') }}" class="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mr-4">
-                            <a class="nav-link"  href="{{ path('dashboard_index') }}">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a class="nav-link" href="{{ path('servico_index') }}">Serviços</a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a class="nav-link" href="#">Grupos</a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a class="nav-link" href="{{ path('noticia_index') }}">Notícias</a>
-                        </li>
-                        <li class="nav-item mr-4">
-                            <a class="nav-link" href="#">Quem Somos</a>
-                        </li>
-                        <li class="nav-item ml-5">
-                            <a class="nav-link text-light" href="#">Entrar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-outline-light ml-0 " href="#">Cadastrar</a>
-                            <!-- Button trigger modal
-                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
-                                Entrar / Cadastrar
-                            </button>
-
-                            <!-- Modal
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-outline-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                -->
-                        </li>
-                    </ul>
-                </div>
+<!-- Início barra de menu // php bin/console server:run --env=dev --docroot=web-->
+<header>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top menu " id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="{{ path('dashboard_index') }}">
+                <img src="{{ asset('vendor/bootstrap-dist/imagem/ativo6fundobranco.png') }}" class="logo logo-menu-none">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item ml-4 mr-4">
+                        <a class="nav-link text-white"  href="{{ path('dashboard_index') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ml-4 mr-4">
+                        <a class="nav-link text-white" href="{{ path('servico_index') }}">Serviços</a>
+                    </li>
+                    <li class="nav-item ml-4 mr-4">
+                        <a class="nav-link text-white" href="#">Grupos</a>
+                    </li>
+                    <div class="logo-none">
+                        <a class="navbar-brand" href="{{ path('dashboard_index') }}">
+                            <img src="{{ asset('vendor/bootstrap-dist/imagem/logo.png') }}" class="logo" id="img">
+                        </a>
+                    </div>
+                    <li class="nav-item m-logo mr-4">
+                        <a class="nav-link  text-white" href="#">Trabalhos</a>
+                    </li>
+                    <li class="nav-item   ml-4 mr-4">
+                        <a class="nav-link text-white" href="{{ path('noticia_index') }}">Notícias</a>
+                    </li>
+                    <li class="nav-item ml-4 mr-4">
+                        <a class="nav-link text-light" href="#">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-cadastrar ml-0" href="#">Cadastra-se</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <!-- Fim da barra de menu -->
+        </div>
+    </nav>
+</header>
+<!-- Fim da barra de menu -->
 
-    {% block body %}
+{% block body %}
 
-    {% endblock %}
+{% endblock %}
 <!-- Inicio Footer -->
-    <footer class=" bg-dark pt-4">
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left text-white">
-            <!-- Grid row -->
-            <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-5 mt-md-0 mt-3">
+<footer class=" bg-dark pt-4">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left text-white">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-5 mt-md-0 mt-3">
 
-                    <!-- Content -->
-                    <a class="span-logo text-white"  href="{{ path('dashboard_index') }}">
+                <!-- Content -->
+                <a class="span-logo text-white"  href="{{ path('dashboard_index') }}">
                     <h5 class="text-uppercase d-inline">Nidiap</h5>
-                    </a>
-                    <br> <br>
-                    <a href=""  class="btn btn-outline-warning">
-                        <i class=" fab fa-facebook fa-lg"></i>
-                    </a>
-                    <a href=""  class="btn btn-outline-warning">
-                        <i class=" fab fa-whatsapp fa-lg"></i>
-                    </a>
-                    <a href=""  class="btn btn-outline-warning">
-                        <i class=" fab fa-instagram fa-lg"></i>
-                    </a>
-                </div>
-                <!-- Grid column -->
+                </a>
+                <br> <br>
+                <a href=""  class="btn btn-outline-warning">
+                    <i class=" fab fa-facebook fa-lg"></i>
+                </a>
+                <a href=""  class="btn btn-outline-warning">
+                    <i class=" fab fa-whatsapp fa-lg"></i>
+                </a>
+                <a href=""  class="btn btn-outline-warning">
+                    <i class=" fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+            <!-- Grid column -->
 
-                <hr class="clearfix w-100 d-md-none pb-3">
+            <hr class="clearfix w-100 d-md-none pb-3">
 
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
 
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Páginas</h5>
+                <!-- Links -->
+                <h5 class="text-uppercase">Páginas</h5>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="{{ path('dashboard_index') }}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('servico_index') }}">Serviçõs</a>
-                        </li>
-                        <li>
-                            <a href="#!">Trabalhos</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('noticia_index') }}">Notícias</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Grupos</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Bate Papo Tecnologico</a>
-                        </li>
-                        <li>
-                            <a href="#!">E2c</a>
-                        </li>
-                        <li>
-                            <a href="#!">Jogos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Sistemas</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ path('dashboard_index') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('servico_index') }}">Serviçõs</a>
+                    </li>
+                    <li>
+                        <a href="#!">Trabalhos</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('noticia_index') }}">Notícias</a>
+                    </li>
+                </ul>
 
             </div>
-            <!-- Grid row -->
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Grupos</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Bate Papo Tecnologico</a>
+                    </li>
+                    <li>
+                        <a href="#!">E2c</a>
+                    </li>
+                    <li>
+                        <a href="#!">Jogos</a>
+                    </li>
+                    <li>
+                        <a href="#!">Sistemas</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
 
         </div>
-        <!-- Footer Links -->
+        <!-- Grid row -->
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright: Todos os Direitos Reservados
-        </div>
-        <!-- Copyright -->
+    </div>
+    <!-- Footer Links -->
 
-    </footer>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright: Todos os Direitos Reservados
+    </div>
+    <!-- Copyright -->
+
+</footer>
 <!-- JavaScripts-->
-    {% block javascripts %}
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="{{ asset ('vendor/bootstrap-dist/js/bootstrap.min.js')}}"></script>
-    {%  endblock %}
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{{ asset ('vendor/bootstrap-dist/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{{ asset ('js/main.js')}}"></script>
+{%  endblock %}
 <!-- Fim JavaScripts-->
 <!-- Fim Footer-->
 </body>
