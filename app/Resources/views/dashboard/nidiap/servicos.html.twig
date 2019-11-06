@@ -1,0 +1,47 @@
+{% extends '/dashboard/template.html.twig' %}
+
+{% block title %}NIDIAp Serviços{% endblock %}
+
+{% block body %}
+
+    <div class="fundo">
+        <h1>Todos os Serviços</h1>
+        <a class="btn btn-warning" style="float: right; margin-top: -45px" href="{{ path('create_servico') }}">Novo Serviço</a>
+
+        {% if servicos is not empty %}
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Img</th>
+                    <th>Titulo</th>
+                    <th>Descrição</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for servico in servicos %}
+                    <tr>
+                        <td> <img src="{{ asset('upload/imagens/' ~ servico.imagem.imageName)}}" height="50" width ="50px"></td>
+                        <td class="crr">{{ servico.titulo | slice(0, 25)}}</td>
+                        <td class="crr">{{ servico.descricao | slice(0, 25) }}...</td>
+                        <td class="crr" style="float: right">
+                            <a class="btn btn-danger" href="{{ path('delete_servico', {'id': servico.id}) }}">Deletar</a>
+                            <a class="btn btn-success" href="{{ path('update_servico', {'id': servico.id}) }}">Atualizar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Sem Serviços no momento.</p>
+        {% endif %}
+
+        <br/>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

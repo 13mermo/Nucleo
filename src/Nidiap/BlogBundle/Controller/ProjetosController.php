@@ -42,6 +42,8 @@ class ProjetosController extends Controller
 
             $projeto = $form->getData();
             $em = $this->getDoctrine()->getManager();
+            var_dump($projeto);
+            die();
             $em->persist($projeto);
             $em->flush();
             return $this->redirectToRoute('projeto_index');

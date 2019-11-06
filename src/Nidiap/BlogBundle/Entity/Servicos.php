@@ -56,6 +56,7 @@ class Servicos
 
     /**
      * Get descricao
+     *
      * @return string
      */
     public function getDescricao(){

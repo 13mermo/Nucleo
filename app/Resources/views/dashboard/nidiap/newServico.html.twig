@@ -1,0 +1,27 @@
+{% extends '/dashboard/template.html.twig' %}
+
+{% block title %}Serviços{% endblock %}
+
+{% block body %}
+    <div class="fundo">
+
+        <h2>Novo Serviço</h2>
+        {{ form_start(form) }}
+            <h3>Titulo:</h3>
+            {{ form_widget(form.titulo) }}
+            <h3>Descrição:</h3>
+            {{ form_widget(form.descricao) }}
+            <h3>Imagem:</h3>
+            {{ form_row(form.imagem)}}
+            <br>
+            {{ form_widget(form.save) }}
+            <br>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}
